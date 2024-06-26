@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-radar {
+  font-size: clamp(200px, 14vw, 335px);
+}
+
+.text-flow {
+  gap:clamp(10rem, 4vw, 16rem);
+}
+
+.pin-spacer {
+  background-color: black;
+}
+
+.radar {
+  will-change: transform;
+}
+
+.char {
+  will-change: transform;
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+  overflow: hidden;
+  transform:translateY(115px);
+  transition: transform 0.5s;
+font-size: 40px;
+}
+
+.radar {
+  background: linear-gradient(to right, black 0%, black 10%, transparent 50%), linear-gradient(to left, black 0%, black 10%, transparent 50%);
+}
