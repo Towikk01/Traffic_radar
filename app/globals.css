@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .text-radar {
   font-size: clamp(200px, 14vw, 335px);
 }
@@ -14,19 +18,37 @@
   background-color: black;
 }
 
+.overlay {
+   --clip:0%;
+  clip-path: circle(0%);
+}
+
 .radar {
   will-change: transform;
 }
 
 .char {
   will-change: transform;
-  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
-  overflow: hidden;
-  transform:translateY(115px);
+  transform: translateY(115px);
   transition: transform 0.5s;
-font-size: 40px;
+  font-size: clamp(20px, 2.1vw, 40px);
+}
+
+.benef-text {
+  font-size: clamp(100px, 2.1vw, 150px);
 }
 
 .radar {
   background: linear-gradient(to right, black 0%, black 10%, transparent 50%), linear-gradient(to left, black 0%, black 10%, transparent 50%);
 }
+/* 
+.white-screen {
+  clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%, 0 94%, 0 6%);
+} */
+
+ .corner-div {
+      width: 200vw;
+      height: 100vh;
+      background-color: #E8E8E8;
+      clip-path: polygon(0 63.8654px, 63.8654px 0, 100% 0, 100% 100%, 63.8654px 100%, 0 calc(100% - 63.8654px));
+    }

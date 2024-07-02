@@ -7,6 +7,7 @@ import BR from "./components/elements/svg/BR";
 import AnimatedLogo from "./components/elements/AnimatedLogo";
 import Header from "./components/layouts/header/Header";
 import Brackets from "./components/layouts/brackets/Brackets";
+import Footer from "./components/layouts/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,10 +21,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
           <Header/>
-         <main className="bg-black h-screen w-full main">
+         <main className="bg-black w-full main">
           <Brackets/>
           {children}
         </main>
+        <Footer/>
       </body>
     </html>
   );

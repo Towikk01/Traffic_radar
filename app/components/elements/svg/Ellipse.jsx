@@ -2,7 +2,7 @@ import React from 'react'
 
 const Ellipse = () => {
   return (
-    <svg className='absolute inset-0' width="698" height="796" viewBox="0 0 698 796" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className='absolute -bottom-[40%] opacity-0 ellipse' width="698" height="796" viewBox="0 0 698 796" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g style={{mixBlendMode:'color-dodge'}} filter="url(#filter0_f_223_2625)">
 <circle cx="300" cy="398" r="175" stroke="url(#paint0_angular_223_2625)" stroke-width="150"/>
 </g>
