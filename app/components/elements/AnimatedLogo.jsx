@@ -32,8 +32,8 @@ const AnimatedLogo = () => {
 
 
   return (
- <svg width="80" ref={logoRef} height="80" viewBox="0 0 80 80" className='z-10' fill="none" xmlns="http://www.w3.org/2000/svg">
-<g style={{ mixBlendMode: "color-dodge" }}>
+ <svg width="80" ref={logoRef} height="80" viewBox="0 0 80 80" className='z-10 w-[40px] h-[40px] md:w-[80px] md:h-[80px]' fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style={{ mixBlendMode: "color-dodge" }}> 
 <g opacity="0.5">
 <path d="M40.0361 9.37781H39.6733V71.7127H40.0361V9.37781Z" fill="url(#paint0_linear_228_258)"/>
 <path d="M17.8578 18.4412L17.7295 18.5694L61.8456 62.6467L61.9739 62.5186L17.8578 18.4412Z" fill="url(#paint1_linear_228_258)"/>

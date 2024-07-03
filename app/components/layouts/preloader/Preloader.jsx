@@ -6,7 +6,7 @@ const Preloader = () => {
     return (
       <div className="preloader flex z-[0] absolute justify-center items-center overflow-hidden w-full h-full">
         <Overlay/>
-                <svg width="1920" style={{height:'100vh'}} className='fixed overflow-visible inset-0 -z-10 w-full h-screen radar' height="1000" viewBox="0 0 1920 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="1920" style={{height:'100vh'}} className='fixed scale-[2] md:scale-1 overflow-visible inset-0 -z-10 w-full h-screen radar' height="1000" viewBox="0 0 1920 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
                <g style={{ mixBlendMode: "hard-light" }}>
             <g style={{ mixBlendMode: 'color-dodge' }} filter="url(#filter0_f_225_4936)">
               <circle className='circle1' cx="960" cy="500" r="935" stroke="url(#paint0_angular_225_4936)" strokeWidth="50"/>

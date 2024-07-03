@@ -12,7 +12,7 @@ const cards = [ FirstCard, SecondCard, ThirdCard, FourthCard, FifthCard, SixthCa
 
 const BenefitsPage = () => {
   return (
-    <section className='flex flex-row h-dvh justify-between absolute benefits-section  items-center w-full'>
+    <section className='flex flex-row h-0 justify-between absolute benefits-section  items-center w-full'>
           <div className='w-2/5 benefit-text'>
               <BenefitText />
           </div>

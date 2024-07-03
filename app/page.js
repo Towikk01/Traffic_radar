@@ -27,8 +27,8 @@ export default function Home() {
       .to('.radar', { scale: 6, ease: 'power2.inOut', duration: 10 })
       .to('.home', { opacity: 0, duration: 2 }, '<=')
       .to('.home', { height: 0 }, '+=0.2', '<')
-      .to('.radar', { opacity: 0, duration: 0.5 }, '<')
-      .to('.radar', {scale: 1, translateY: '-35%'}, "+=0.1")
+      .to('.radar', { opacity: 0, duration: 1.5 }, '<')
+  
     
     const textSection = gsap.timeline()
     textSection
@@ -45,15 +45,21 @@ export default function Home() {
       .to('.text-page', {
         height: 0, 
       }, "+=0.5")
+     
     
     const benefitsSection = gsap.timeline()
-    benefitsSection.to('.ellipse', {
+    benefitsSection
+      .to('.benefits-section', {
+        height: '100dvh'
+      })
+      .to('.ellipse', {
       opacity: 1,
-      duration: 0.5,
+      duration: 1.5,
     }, "+=0.5")
+       .to('.radar', {scale: 1, translateY: '-35%'}, "+=0.1")
       .to('.benef-text', {
         opacity: 1,
-        duration: 1
+        duration: 2
       }, "+=1")
       .to('.card-1', {
         translateX: '6%',
@@ -126,15 +132,15 @@ export default function Home() {
       .to('.white-first', {
         display: 'flex',
         opacity: 1,
-        duration: 1,
+        duration: 2,
       }, "<=")
       .to('.radar', {
         opacity: 1,
-        duration: 1,
+        duration: 6,
         background: 'none',
       })
       .to('.overlay', {
-        duration: 3,
+        duration: 8,
         clipPath: 'circle(100%)'
       }, '+=1')
       .to('.white-first', {
@@ -157,15 +163,15 @@ export default function Home() {
       .to('.white-second', {
         display: 'flex',
         opacity: 1,
-        duration: 1,
+        duration: 3,
       })
       .to('.overlay', {
         background: '#E8E8E8'
       }, "<=+2")
       .to('.overlay', {
         clipPath: 'circle(100%)',
-        duration: 3
-      }, '<')
+        duration: 8
+      }, '+=2')
        .to('.white-second', {
         opacity: 0,
         duration: .2,
