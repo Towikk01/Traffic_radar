@@ -16,6 +16,10 @@ html {
     }
 }
 
+
+.home {
+  will-change: transform, opacity;
+}
 .text-flow {
   gap:clamp(10rem, 4vw, 16rem);
 }
@@ -30,7 +34,7 @@ html {
 }
 
 .radar {
-  will-change: transform;
+  will-change: transform, clip, filter;
 }
 
 .char {
@@ -41,67 +45,37 @@ html {
 }
 
 .benef-text {
-  font-size: clamp(100px, 2.1vw, 150px);
+  font-size: clamp(35px, 2.2vw, 48px);
+  @media screen and (min-width: 768px) {
+      font-size: clamp(100px, 2.1vw, 150px);
+  }
 }
 
 .radar {
   background: linear-gradient(to right, black 0%, black 10%, transparent 50%), linear-gradient(to left, black 0%, black 10%, transparent 50%);
 }
-/* 
-.white-screen {
-  clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%, 0 94%, 0 6%);
-} */
+
 
  .corner-div {
-      width: 200vw;
-      height: 100vh;
+      width: 100%;
+      height: 200vh;
       background-color: #E8E8E8;
-      clip-path: polygon(0 63.8654px, 63.8654px 0, 100% 0, 100% 100%, 63.8654px 100%, 0 calc(100% - 63.8654px));
+clip-path: polygon(6% 0, 94% 0, 100% 3%, 100% 100%, 0 100%, 0 3%);
+
+
+
+      @media screen and (min-width: 768px) {
+        width: 200vw;
+        clip-path: polygon(0 63.8654px, 63.8654px 0, 100% 0, 100% 100%, 63.8654px 100%, 0 calc(100% - 63.8654px));
+      }
     }
 
 
 
-
-    .border-button {
+   .sliced-corners-div {
   position: relative;
-}
-
-.border-button::before, .border-button::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
-.menu-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 24px;
-}
-
-.menu-icon span {
-  display: block;
   width: 100%;
-  height: 2px;
-  background-color: white;
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.menu-icon.open span:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-
-.menu-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-icon.open span:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
+  height: 193px;
+  background: linear-gradient(45deg, #D2D2D2, #E8E8E8, #D2D2D2);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 23px), calc(100% - 23px) 100%, 23px 100%, 0 calc(100% - 23px));
 }

@@ -3,9 +3,9 @@ import Ellipse from '../../elements/svg/Ellipse'
 
 const BenefitText = () => {
   return (
-      <div className='relative'>
+      <div className='relative px-6 pt-8 md:px-0 flex items-end justify-center'>
           <Ellipse />
-          <h4 className='benef-text pl-20 text-left leading-[135px] opacity-0 text-white w-full ' >Чого очікувати від нас?</h4>
+          <h4 className='benef-text leading-10 md:pl-20 text-left md:leading-[135px] opacity-0 text-white w-full ' >Чого очікувати від нас?</h4>
     </div>
   )
 }
