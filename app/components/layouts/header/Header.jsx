@@ -16,7 +16,7 @@ const Header = () => {
          setIsOpen(!isOpen);
      };
   return (
-      <header className='flex w-full fixed z-[10] md:mix-blend-difference gap-2 md:gap-0 flex-row header justify-between items-center md:pl-[42px] px-7 bg-transparent md:pr-[80px] pt-[2.5rem] md:pt-[65px]'>
+      <header className='hidden w-full fixed z-[10] md:mix-blend-difference gap-2 md:gap-0 flex-row header justify-between items-center md:pl-[42px] px-7 bg-transparent md:pr-[80px] pt-[2.5rem] md:pt-[65px]'>
           <AnimatedLogo />
           <nav className='hidden md:flex flex-row header-nav items-center gap-10'>
              {links.map((link, index) => (

@@ -81,21 +81,25 @@ export default function Home() {
         opacity: 0,
         duration: 1
       }, "<")
-        .to('.home', {
-        opacity: 1,
-        duration: 1,
-        translateY: 0
-      })
       .to('.header', {
         opacity: 1,
+        display: 'flex',
         duration: 1
       }, "<")
-    .to('.body', {overflow: 'visible'}, "<")
+        .to('.home', {
+        display: 'flex',
+        duration: 1
+    })
+      .to('.body', { overflow: 'visible' }, "<")
+    
    
 
     const firstSection = gsap.timeline()
     firstSection
-     
+      .set('.home', {
+        opacity: 1,
+        duration: 1
+    })
       .to('.radar', { scale: 6, ease: 'power2.inOut', duration: 10 })
       .to('.home', { opacity: 0, duration: 2 }, '<=')
       .to('.home', { height: 0 }, '+=0.2', '<')
