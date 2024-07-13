@@ -6,7 +6,7 @@ const secondText= 'Кожен наш оффер унікальний та при
 
 const splitText = (text) => {
   return text.split(' ').map((char, index) => (
-    <div className={`overflow-hidden tracking-[-1.25px] text-[20px] inline-block ${char === ' ' ? 'space' : ''}`}>
+    <div key={index} className={`overflow-hidden tracking-[-1.25px] text-[20px] inline-block ${char === ' ' ? 'space' : ''}`}>
       <div className={`char inline-block ${char === ' ' ? 'space' : ''}`}>{char}{index < text.split(' ').length - 1 && '\u00A0'}
 </div>
     </div>

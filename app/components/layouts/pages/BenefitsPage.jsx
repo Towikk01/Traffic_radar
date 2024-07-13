@@ -18,8 +18,8 @@ const BenefitsPage = () => {
           </div>
       <div className='flex flex-row card-block relative h-full w-full md:w-3/5'>
         {cards.map((Card, index) => (
-          <div className={`absolute card-${index + 1} w-full translate-y-[250%] md:translate-y-0 md:translate-x-[200%]`}> 
-              <Card key={index} />
+          <div  key={index} className={`absolute card-${index + 1} w-full translate-y-[250%] md:translate-y-0 md:translate-x-[200%]`}> 
+              <Card />
             </div>
         ))}
           </div>
