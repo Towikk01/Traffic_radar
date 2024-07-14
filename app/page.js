@@ -17,7 +17,7 @@ import PreloaderCounter from "./components/layouts/pages/PreloaderCounter";
 export default function Home() {
   const appRef = useRef(null)
   useGSAP(() => {
-    gsap.ticker.fps(30)
+    gsap.ticker.fps(20)
     gsap.registerPlugin(ScrollTrigger)
     const globalTimeline = gsap.timeline({
       ease: 'power2.inOut',

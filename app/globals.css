@@ -34,7 +34,9 @@ html {
 }
 
 .radar {
-  will-change: transform, clip, filter;
+  will-change: transform, clip, filter, opacity;
+      shape-rendering: optimizeSpeed;
+
 }
 
 .char {
@@ -55,6 +57,10 @@ html {
   background: linear-gradient(to right, black 0%, black 10%, transparent 50%), linear-gradient(to left, black 0%, black 10%, transparent 50%);
 }
 
+
+.card {
+  will-change: transform;
+}
 
  .corner-div {
       width: 100%;
