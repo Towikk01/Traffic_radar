@@ -7,7 +7,7 @@ import { useState } from 'react'
 import MobileMenu from '../../elements/MobileMenu'
 
 
-const links = [{text: "Логін", href: "https://aff.onepartners.io/login"}, {text: "Приєднатись", href: 'https://aff.onepartners.io/signup/affiliate'}]
+const links = [{text: "Логін", href: "https://trafficradar.affise.com/v2/sign/in"}, {text: "Приєднатись", href: 'https://trafficradar.affise.com/v2/sign/up'}]
 
 const Header = () => {
      const [isOpen, setIsOpen] = useState(false);
