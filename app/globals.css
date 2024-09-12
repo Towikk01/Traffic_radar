@@ -3,85 +3,101 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .text-radar {
     font-size: clamp(95px, 14vw, 130px);
-
+    will-change: transform, opacity;
 
     @media screen and (min-width: 768px) {
-    font-size: clamp(200px, 14vw, 335px);
-      
+        font-size: clamp(200px, 14vw, 335px);
     }
 }
 
-
 .home {
-  will-change: transform, opacity;
+    will-change: transform, opacity;
 }
 .text-flow {
-  gap:clamp(10rem, 4vw, 16rem);
+    gap: clamp(10rem, 4vw, 16rem);
+    will-change: transform, opacity;
 }
 
 .pin-spacer {
-  background-color: black;
+    background-color: black;
+    will-change: transform, opacity;
 }
 
 .overlay {
-   --clip:0%;
-  clip-path: circle(0%);
+    --clip: 0%;
+    clip-path: circle(0%);
+    will-change: transform, opacity;
 }
 
 .radar {
-  will-change: transform, clip, filter, opacity;
-      shape-rendering: optimizeSpeed;
-
+    will-change: transform, clip, filter, opacity;
+    shape-rendering: optimizeSpeed;
 }
 
 .char {
-  will-change: transform;
-  transform: translateY(115px);
-  transition: transform 0.5s;
-  font-size: clamp(20px, 2.1vw, 40px);
+    will-change: transform;
+    transform: translateY(115px);
+    transition: transform 0.5s;
+    font-size: clamp(20px, 2.1vw, 40px);
+    will-change: transform, opacity;
 }
 
 .benef-text {
-  font-size: clamp(35px, 2.2vw, 48px);
-  @media screen and (min-width: 768px) {
-      font-size: clamp(100px, 2.1vw, 150px);
-  }
+    font-size: clamp(35px, 2.2vw, 48px);
+    @media screen and (min-width: 768px) {
+        font-size: clamp(100px, 2.1vw, 150px);
+    }
+    will-change: transform, opacity;
 }
 
 .radar {
-  background: linear-gradient(to right, black 0%, black 10%, transparent 50%), linear-gradient(to left, black 0%, black 10%, transparent 50%);
+    background: linear-gradient(to right, black 0%, black 10%, transparent 50%),
+        linear-gradient(to left, black 0%, black 10%, transparent 50%);
+    will-change: transform, opacity;
 }
-
 
 .card {
-  will-change: transform;
+    will-change: transform, opacity;
 }
 
- .corner-div {
-      width: 100%;
-      height: 200vh;
-      background-color: #E8E8E8;
-clip-path: polygon(6% 0, 94% 0, 100% 3%, 100% 100%, 0 100%, 0 3%);
+.corner-div {
+    width: 100%;
+    height: 200vh;
+    background-color: #e8e8e8;
+    clip-path: polygon(6% 0, 94% 0, 100% 3%, 100% 100%, 0 100%, 0 3%);
+    will-change: transform, opacity;
 
-
-
-      @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) {
         width: 200vw;
-        clip-path: polygon(0 63.8654px, 63.8654px 0, 100% 0, 100% 100%, 63.8654px 100%, 0 calc(100% - 63.8654px));
-      }
+        clip-path: polygon(
+            0 63.8654px,
+            63.8654px 0,
+            100% 0,
+            100% 100%,
+            63.8654px 100%,
+            0 calc(100% - 63.8654px)
+        );
     }
+}
 
+.sliced-corners-div {
+    will-change: transform, opacity;
 
-
-   .sliced-corners-div {
-  position: relative;
-  width: 100%;
-  height: 193px;
-  background: linear-gradient(45deg, #D2D2D2, #E8E8E8, #D2D2D2);
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 23px), calc(100% - 23px) 100%, 23px 100%, 0 calc(100% - 23px));
+    position: relative;
+    width: 100%;
+    height: 193px;
+    background: linear-gradient(45deg, #d2d2d2, #e8e8e8, #d2d2d2);
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - 23px),
+        calc(100% - 23px) 100%,
+        23px 100%,
+        0 calc(100% - 23px)
+    );
 }
