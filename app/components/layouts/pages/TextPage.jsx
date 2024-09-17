@@ -1,9 +1,6 @@
 import React from 'react';
-
-const firstText =
-    'Раді вітати вас у Traffic Radar! Ми молода та енергійна команда спеціалістів, яка пропонує топові продукти для всіх доступних ГЕО і багато інших переваг.';
-const secondText =
-    'Кожен наш оффер унікальний та привабливий для вебмайстрів, а ми завжди готові допомогти підібрати найкращий варіант для вас.';
+import { useLanguage } from '@/app/context/translate';
+import { dictionary } from '@/app/context/dictionary';
 
 const splitText = (text) => {
     return text.split(' ').map((char, index) => (
@@ -22,6 +19,9 @@ const splitText = (text) => {
 };
 
 const TextPage = () => {
+    const { language } = useLanguage();
+    const firstText = dictionary[language].textSection.firstText;
+    const secondText = dictionary[language].textSection.secondText;
     return (
         <section
             id="text-page"

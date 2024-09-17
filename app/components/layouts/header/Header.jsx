@@ -9,25 +9,34 @@ import { FaTelegramPlane } from 'react-icons/fa';
 
 import { IoLogoInstagram } from 'react-icons/io5';
 import Link from 'next/link';
-
-const links = [
-    { text: 'Логін', href: 'https://trafficradar.affise.com/v2/sign/in' },
-    { text: 'Приєднатись', href: 'https://trafficradar.affise.com/v2/sign/up' },
-];
-
+import { useLanguage } from '@/app/context/translate';
+import { dictionary } from '@/app/context/dictionary';
 const Header = () => {
+    const { language, changeLanguage } = useLanguage();
+
+    const links = [
+        {
+            href: 'https://trafficradar.partner.alanbase.com/login',
+            text: dictionary[language].header.buttons[0],
+        },
+        {
+            href: 'https://trafficradar.partner.alanbase.com/registration',
+            text: dictionary[language].header.buttons[1],
+        },
+    ];
+
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
     return (
-        <header className="flex w-full fixed z-[10] md:mix-blend-difference gap-2 md:gap-0 flex-row header justify-between items-center md:pl-[42px] px-7 bg-transparent md:pr-[80px] pt-[2.5rem] md:pt-[65px]">
+        <header className="flex w-full fixed z-50 md:mix-blend-difference gap-2 md:gap-0 flex-row header justify-between items-center md:pl-[42px] px-7 bg-transparent md:pr-[80px] pt-[2.5rem] md:pt-[65px]">
             <AnimatedLogo />
             <nav className="hidden md:flex flex-row header-nav items-center gap-8">
                 {links.map((link, index) => (
                     <Button key={index} href={link.href}>
-                        {link.text}
+                        {dictionary[language].header.buttons[index]}
                     </Button>
                 ))}
                 <div className="flex flex-row gap-6 items-center">

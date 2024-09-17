@@ -9,18 +9,22 @@ import HomePage from './components/layouts/pages/HomePage';
 import TextPage from './components/layouts/pages/TextPage';
 import BenefitsPage from './components/layouts/pages/BenefitsPage';
 import WhitePage from './components/layouts/pages/WhitePage';
+import Header from './components/layouts/header/Header';
+import Footer from './components/layouts/footer/Footer';
+import Brackets from './components/layouts/brackets/Brackets';
+import TranslateProvider from './context/translate';
+import LanguageMenu from './components/elements/LanguageMenu';
 
 export default function Home() {
     const appRef = useRef(null);
     useGSAP(() => {
-        gsap.ticker.fps(30);
+        gsap.ticker.fps(40);
         gsap.registerPlugin(ScrollTrigger);
+
         const globalTimeline = gsap.timeline({
             ease: 'power2.inOut',
         });
 
-        // const firstSection = gsap.timeline();
-        // firstSection
         globalTimeline
             .to('.radar', { scale: 6, ease: 'power2.inOut', duration: 1.5 })
             .to('.home', { opacity: 0, duration: 2 }, '<=')
@@ -436,14 +440,22 @@ export default function Home() {
     }, [appRef]);
 
     return (
-        <div ref={appRef} className="h-[8500px] w-full">
-            <div className="fixed w-full">
-                <Preloader />
-                <HomePage />
-                <TextPage />
-                <BenefitsPage />
-                <WhitePage />
-            </div>
-        </div>
+        <TranslateProvider>
+            <Header />
+            <main className="bg-black w-full main">
+                <LanguageMenu />
+                <Brackets />
+                <div ref={appRef} className="h-[8500px] w-full">
+                    <div className="fixed w-full">
+                        <Preloader />
+                        <HomePage />
+                        <TextPage />
+                        <BenefitsPage />
+                        <WhitePage />
+                    </div>
+                </div>
+            </main>
+            <Footer />
+        </TranslateProvider>
     );
 }

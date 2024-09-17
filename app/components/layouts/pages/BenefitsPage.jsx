@@ -1,4 +1,6 @@
 import React from 'react';
+import { useLanguage } from '@/app/context/translate';
+import { dictionary } from '@/app/context/dictionary';
 import BenefitText from '../benefit-text/BenefitText';
 import FifthCard from '../../elements/cards/FifthCard';
 import FourthCard from '../../elements/cards/FourthCard';
@@ -19,6 +21,9 @@ const cards = [
 ];
 
 const BenefitsPage = () => {
+    const { language } = useLanguage();
+    const { cardsSection } = dictionary[language];
+
     return (
         <section
             id="benefits-page"
@@ -28,7 +33,7 @@ const BenefitsPage = () => {
                 <BenefitText />
             </div>
             <div className="flex flex-row card-block relative h-full w-full md:w-3/5">
-                {cards.map((Card, index) => (
+                {cardsSection.cards.map((Card, index) => (
                     <div
                         key={index}
                         className={`absolute card-${
