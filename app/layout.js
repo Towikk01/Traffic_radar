@@ -1,8 +1,5 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Header from './components/layouts/header/Header';
-import Brackets from './components/layouts/brackets/Brackets';
-import Footer from './components/layouts/footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,6 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <head>
+                {/* <link rel="icon" href="/favicon.ico" sizes="any" /> */}
+            </head>
             <body className={`${inter.className} body`}>{children}</body>
         </html>
     );

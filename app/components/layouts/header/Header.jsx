@@ -20,7 +20,7 @@ const Header = () => {
             text: dictionary[language].header.buttons[0],
         },
         {
-            href: 'https://trafficradar.partner.alanbase.com/registration',
+            href: 'https://trafficradar.affise.com/v2/sign/up',
             text: dictionary[language].header.buttons[1],
         },
     ];
