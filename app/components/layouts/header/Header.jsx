@@ -16,7 +16,7 @@ const Header = () => {
 
     const links = [
         {
-            href: 'https://trafficradar.partner.alanbase.com/login',
+            href: 'https://trafficradar.affise.com/v2/sign/in',
             text: dictionary[language].header.buttons[0],
         },
         {
